@@ -41,7 +41,7 @@ with TelegramClient(session_name, api_id, api_hash) as client:
         # Using InputReportReasonSpam as the reporting reason
         reason = types.InputReportReasonSpam()  # Replace with a different reason if needed
         message = "This channel is a scam and violates Telegram ToS."  # Customize the message as needed
-        for i in range(1, 31):  # Send 10 reports
+        for i in range(1, 31):  # Send reports
             try:
                 client(functions.account.ReportPeerRequest(
                     peer=target_entity,
